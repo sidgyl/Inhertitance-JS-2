@@ -1,0 +1,201 @@
+<html>
+    <head>
+	<style type="text/css">
+		body {
+			
+		}
+		canvas {
+			border: 2px solid black;
+			margin: 20px;
+		}	
+	</style>
+	</head>
+    <body>
+	
+	<canvas id="oDraw" width="800" height="600" style="border:2px solid black;">
+		Your browser does not support the HTML5 canvas tag.
+	</canvas>
+	<script type="text/javascript" src="grid.js"></script>
+	<script> drawBoard() </script>
+	<script type = "text/Javascript" src = "rect.js"></script>
+	<script>
+	draw(0,0,800,600,"none","blue",5);
+	myRect.push(new Shape(0,0,800,600,"none","blue",5));
+	</script>
+	<script>
+	setRadio(0,0);
+	setRadio(1,0);
+	setRadio(2,1); // Stroke color is black
+	setRadio(3,0);
+	</script>
+<form>
+     Mode Options:
+     <input type="radio" name="radio0" 
+       onclick="function1();"
+       checked="checked">Selection
+	   
+     <input type="radio" name="radio0"
+       onclick="function2();">
+       Rectangle
+    
+     <input type="radio" name="radio0"
+       onclick="setRadio(0,2);">
+       Set Properties<br>
+	   
+     Fill Color:
+     <input type="radio" name="radio1" id="radio1none"
+       onclick="setRadio(1,0); "
+       checked="checked">None
+	   
+     <input type="radio" name="radio1" id="radio1black"
+       onclick="setRadio(1,1); ">
+       Black
+	   
+     <input type="radio" name="radio1" id="radio1red"
+       onclick="setRadio(1,2); ">
+       Red
+	   
+     <input type="radio" name="radio1" id="radio1green"
+       onclick="setRadio(1,3); ">
+       Green
+	   
+     <input type="radio" name="radio1" id="radio1blue"
+       onclick="setRadio(1,4); ">
+       Blue
+	   
+     <input type="radio" name="radio1" id="radio1orange"
+       onclick="setRadio(1,5); ">
+       Orange 
+	   
+     <input type="radio" name="radio1" id="radio1violet"
+       onclick="setRadio(1,6); ">
+       Violet
+       
+    <input type="radio" name="radio1" id="radio1inherit"
+    	onclick="setRadio(1,7);">
+    	inherit
+       <br>
+	   
+     Stroke Color:
+     <input type="radio" name="radio2" id="radio2none"
+       onclick="setRadio(2,0); ">None 
+	   
+     <input type="radio" name="radio2" id="radio2black"
+       onclick="setRadio(2,1); "
+       checked="checked">Black
+	   
+     <input type="radio" name="radio2" id="radio2red"
+       onclick="setRadio(2,2); ">
+       Red
+	   
+     <input type="radio" name="radio2" id="radio2green"
+       onclick="setRadio(2,3); ">
+       Green
+	   
+     <input type="radio" name="radio2" id="radio2blue"
+       onclick="setRadio(2,4); ">
+       Blue
+	   
+     <input type="radio" name="radio2" id="radio2orange"
+       onclick="setRadio(2,5); ">
+       Orange
+	   
+     <input type="radio" name="radio2" id="radio2violet"
+       onclick="setRadio(2,6); ">
+       Violet
+       
+     <input type="radio" name="radio2" id="radio2inherit"
+    	onclick="setRadio(2,7);">
+    	inherit
+       <br>
+	   
+     Stroke Thickness:
+     <input type="radio" name="radio3" id="radio3one"
+       onclick="setRadio(3,0); "
+       checked="checked">1
+	   
+     <input type="radio" name="radio3" id="radio3two"
+       onclick="setRadio(3,1); ">
+       2
+	   
+     <input type="radio" name="radio3" id="radio3three"
+       onclick="setRadio(3,2); ">
+       3
+	   
+     <input type="radio" name="radio3" id="radio3four"
+       onclick="setRadio(3,3); ">
+       4
+	   
+     <input type="radio" name="radio3" id="radio3five"
+       onclick="setRadio(3,4); ">
+       5
+       
+     <input type="radio" name="radio3" id="radio3inherit"
+    	onclick="setRadio(3,5);">
+    	inherit
+       <br>
+</form>
+	<script>  init();
+	
+	function function1(){
+		setRadio(0,0);
+		disable();
+	}
+	function function2(){
+		setRadio(0,1);
+		enable();
+	}
+	
+	function disable(){
+		radio1none.disabled=true
+		radio1black.disabled=true;
+		radio1red.disabled=true;
+		radio1green.disabled=true;
+		radio1blue.disabled=true;
+		radio1orange.disabled=true;
+		radio1violet.disabled=true;
+		radio1inherit.disabled=true;
+		radio2none.disabled=true
+		radio2black.disabled=true;
+		radio2red.disabled=true;
+		radio2green.disabled=true;
+		radio2blue.disabled=true;
+		radio2orange.disabled=true;
+		radio2violet.disabled=true;
+		radio2inherit.disabled=true;
+		radio3one.disabled=true;
+		radio3two.disabled=true;
+		radio3three.disabled=true;
+		radio3four.disabled=true;
+		radio3five.disabled=true;
+		radio3inherit.disabled=true;
+	}
+	
+	function enable(){
+		radio1none.disabled=false
+		radio1black.disabled=false;
+		radio1red.disabled=false;
+		radio1green.disabled=false;
+		radio1blue.disabled=false;
+		radio1orange.disabled=false;
+		radio1violet.disabled=false;
+		radio1inherit.disabled=false;
+		radio2none.disabled=false
+		radio2black.disabled=false;
+		radio2red.disabled=false;
+		radio2green.disabled=false;
+		radio2blue.disabled=false;
+		radio2orange.disabled=false;
+		radio2violet.disabled=false;
+		radio2inherit.disabled=false;
+		radio3one.disabled=false;
+		radio3two.disabled=false;
+		radio3three.disabled=false;
+		radio3four.disabled=false;
+		radio3five.disabled=false;
+		radio3inherit.disabled=false;
+	}
+	</script>
+	
+    </body>
+</html>
